@@ -34,17 +34,19 @@
 
 // export default App
 import "./App.css";
+import ImpactComponent from "./Impact/impact-component";
 // import FlexBoxComponent from "./flex-box/flex-box-component";
 // import HelloWorldComponent from "./hello-world/hello-world-component";
 // import LeadersTomorrowComponent from "./leaders-tomorrow/leaders-tomorrow-component";
 // import SymbolComponent from "./symbol/symbol-component";
 // import TrustedbyComponent from "./trusted-by/trusted-by-component";
-import ContactComponent from "./contactUs/contact.jsx";
+// import ContactComponent from "./contactUs/contact.jsx";
 // import PostionComponent from "./positioning/position-component";
+// import ImpactComponent from "./Impact/impact-component";
 function App() {
   return (
     <div>
-      <ContactComponent />
+      <ImpactComponent />
     </div>
   );
 }

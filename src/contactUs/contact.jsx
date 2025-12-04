@@ -4,7 +4,7 @@ import { ContactStyle } from "./cotactStyle";
 const ContactComponent = () => {
   return (
     <ContactStyle>
-      <div className="content">
+      <div className="contact">
         <h1>GET IN TOUCH</h1>
         <p>
           Have questions or feedback? We're here to help. <br />
