@@ -7,64 +7,30 @@ const TrustedbyComponent = () => {
   return (
     <TrustedByStyle>
       <h1>Trusted By</h1>
-
       <div className="parent">
-        {/* CARD 1 */}
         <div className="child">
-          <div className="iconCircle">
-          <div className="icon"><FontAwesomeIcon icon={faBuildingColumns} style={{color: "rgb(0, 197, 190)"}} />
-          </div>
-          </div>
-
-          <div className="contentBox">
-            <span className="numbers">100+</span>
-            <span className="details">COLLEGES</span>
-          </div>
-
-          <div className="shadowBox1"></div>
+          <FontAwesomeIcon icon={faBuildingColumns} style={{color: "rgb(0, 197, 190)"}} />
+          <span className="numbers">100+</span>
+          <br></br>
+          <span className="details">Colleges</span>
         </div>
-
-        {/* CARD 2 */}
         <div className="child">
-          <div className="iconCircle">
-            <div className="icon"><FontAwesomeIcon icon={faChalkboardUser}style={{color: "rgb(0, 189, 235)"}} />
-          </div>
-          </div>
-          <div className="contentBox">
-            <span className="numbers">150</span>
-            <span className="details">TRAINERS</span>
-          </div>
-
-          <div className="shadowBox2"></div>
+          <FontAwesomeIcon icon={faChalkboardUser} style={{color: "rgb(0, 189, 235)"}} />
+          <span className="numbers">150</span>
+          <br></br>
+          <span className="details">Professional Trainers</span>
         </div>
-
-        {/* CARD 3 */}
         <div className="child">
-          <div className="iconCircle">
-             <div className="icon"><FontAwesomeIcon icon={faBook} style={{color: "rgb(243, 176, 79)"}}/>
-          </div>
-          </div>
-
-          <div className="contentBox">
-            <span className="numbers">1000+</span>
-            <span className="details">STUDY MATERIALS</span>
-          </div>
-
-          <div className="shadowBox3"></div>
+          <FontAwesomeIcon icon={faBook} style={{color: "rgb(243, 176, 79)"}} />
+          <span className="numbers">1000+</span>
+          <br></br>
+          <span className="details">Study Materials</span>
         </div>
-
-        {/* CARD 4 */}
         <div className="child">
-          <div className="iconCircle">
-           <div className="icon"> <FontAwesomeIcon icon={faUserGraduate} style={{color: "rgb(255, 107, 107)"}} />
-          </div>
-          </div>
-          <div className="contentBox">
-            <span className="numbers">100000+</span>
-            <span className="details">STUDENTS</span>
-          </div>
-
-          <div className="shadowBox4"></div>
+          <FontAwesomeIcon icon={faUserGraduate} style={{color: "rgb(255, 107, 107)"}} />
+          <span className="numbers"> 100000+</span>
+          <br></br>
+          <span className="details">Students</span>
         </div>
       </div>
     </TrustedByStyle>
