@@ -4,11 +4,13 @@ export const OurPromiseStyle = styled.div`
   width: 100%;
   padding: 50px 0;
 
+
   .title {
     font-weight: 600;
     font-size: 48px;
     text-align: center;
     font-family: "Work Sans", sans-serif;
+    
     
   }
 

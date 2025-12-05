@@ -23,7 +23,7 @@ const OurPromiseComponent = () => {
         {/* Top Code Quality */}
         <div className="card top-quality">
           <div className="card-header">
-            <FontAwesomeIcon icon={faLaptopCode} className="icon" style={{color:"#5fb99e"}} />
+            <FontAwesomeIcon icon={faLaptopCode} className="icon" style={{color: "rgb(68, 178, 179)"}} />
             <div className="card-title">Top Code Quality</div>
           </div>
           <p className="card-text">
@@ -36,7 +36,7 @@ const OurPromiseComponent = () => {
         {/* Responsive */}
         <div className="card responsive">
           <div className="card-header">
-            <FontAwesomeIcon icon={faTabletScreenButton} className="icon" style={{color:"#ecd274"}} />
+            <FontAwesomeIcon icon={faTabletScreenButton} className="icon" style={{color: "rgb(239, 175, 75)"}} />
             <div className="card-title">Responsive</div>
           </div>
           <p className="card-text">
@@ -48,7 +48,7 @@ const OurPromiseComponent = () => {
         {/* Rockstar Team */}
         <div className="card rockstar">
           <div className="card-header">
-            <FontAwesomeIcon icon={faPeopleGroup} className="icon" style={{color:"#41dbe6"}} />
+            <FontAwesomeIcon icon={faPeopleGroup} className="icon" style={{color: "rgb(0, 189, 235)"}} />
             <div className="card-title">Rockstar Team</div>
           </div>
           <p className="card-text">
@@ -60,7 +60,7 @@ const OurPromiseComponent = () => {
         {/* Fast Turn-arounds */}
         <div className="card fast-turn">
           <div className="card-header">
-            <FontAwesomeIcon icon={faDiamondTurnRight} className="icon" style={{color:"#9c0be0"}} />
+            <FontAwesomeIcon icon={faDiamondTurnRight} className="icon" style={{color: "rgb(134, 74, 249)"}} />
             <div className="card-title">Fast Turn-arounds</div>
           </div>
           <p className="card-text">
@@ -72,7 +72,7 @@ const OurPromiseComponent = () => {
         {/* Life-time Support */}
         <div className="card lifetime">
           <div className="card-header">
-            <FontAwesomeIcon icon={faLifeRing} className="icon" style={{color:"#ef343d"}} />
+            <FontAwesomeIcon icon={faLifeRing} className="icon" style={{color: "rgb(252, 41, 71)"}}/>
             <div className="card-title">Life-time Support</div>
           </div>
           <p className="card-text">
@@ -84,7 +84,7 @@ const OurPromiseComponent = () => {
         {/* Secured Agreement */}
         <div className="card secured">
           <div className="card-header">
-            <FontAwesomeIcon icon={faShieldHalved} className="icon" style={{color:"#2faa27"}} />
+            <FontAwesomeIcon icon={faShieldHalved} className="icon" style={{color: "rgb(50, 199, 102)"}} />
             <div className="card-title">Secured Agreement</div>
           </div>
           <p className="card-text">
