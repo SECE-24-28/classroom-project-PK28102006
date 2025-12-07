@@ -6,7 +6,6 @@ import {
   faTabletScreenButton, 
   faPeopleGroup, 
   faDiamondTurnRight, 
-  faShieldHalved,
   faLifeRing
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -84,7 +83,6 @@ const OurPromiseComponent = () => {
         {/* Secured Agreement */}
         <div className="card secured">
           <div className="card-header">
-            <FontAwesomeIcon icon={faShieldHalved} className="icon" style={{color: "rgb(50, 199, 102)"}} />
             <div className="card-title">Secured Agreement</div>
           </div>
           <p className="card-text">
