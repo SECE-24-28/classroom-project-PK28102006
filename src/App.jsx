@@ -58,6 +58,8 @@ import FlexWrapComponent from "./flex-wrap/flex-wrap-component";
 import NotFoundComponent from "./404-component/404-component.jsx";
 import UseStateComponent from "./usestate-1st/use-state-component.jsx";
 import UsestateformComponent from "./use-state-form/use-state-form-component.jsx";
+import AdditionOperationComponent from "./addition-operation-in-state/addition-operation-component.jsx";
+import HelloWorldComponent from "./hello-world/hello-world-component.jsx";
 // Example data array for PropsPracticeTwo
 // const arr1 = [
 //   { name: "John", mobile: "1234567890" },
@@ -82,6 +84,8 @@ function App() {
         <Route path="/impact" element={<ImpactComponent/>} />
         <Route path="/usestate" element={<UseStateComponent/>} />
         <Route path="/ustateform" element={<> <UsestateformComponent/> </>} />
+        <Route path="/addition" element={<AdditionOperationComponent/>} />
+        <Route path="/helloworld" element={<HelloWorldComponent/>} />
         <Route path="*" element={<NotFoundComponent/>} />
       </Routes>
     </div>
