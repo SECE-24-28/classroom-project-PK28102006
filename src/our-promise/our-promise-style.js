@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const OurPromiseStyle = styled.div`
   width: 100%;
   padding: 50px 0;
-
+  gap: ${(props) => props.gapLength};
 
   .title {
     font-weight: 600;

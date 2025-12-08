@@ -11,7 +11,7 @@ import {
 
 const OurPromiseComponent = () => {
   return (
-    <OurPromiseStyle>
+    <OurPromiseStyle gapLength="20px">
       <h1 className="title">Our Promise</h1>
       <p className="title-content">
         As part of our high quality service, we'd like to offer something extra too.
@@ -95,5 +95,6 @@ const OurPromiseComponent = () => {
     </OurPromiseStyle>
   );
 };
+
 
 export default OurPromiseComponent;

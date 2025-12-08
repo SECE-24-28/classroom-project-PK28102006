@@ -45,11 +45,24 @@ import "./App.css";
 // import ImpactComponent from "./Impact/impact-component";
 // import FlexWrapComponent from "./flex-wrap/flex-wrap-component";
 // import OurPromiseComponent from "./our-promise/our-promise-component";
-import PositionExampleComponent from "./position-example/position-example-component";
+// import PositionExampleComponent from "./position-example/position-example-component";
+// import PropsPractice from "./props-practice/props-practice-component";
+import PropsPracticeTwo from "./props-practice-2/props-practice-2";
+
+// Example data array for PropsPracticeTwo
+const arr1 = [
+  { name: "John", mobile: "1234567890" },
+  { name: "Jane", mobile: "0987654321" }
+];
+
 function App() {
   return (
     <div>
-      <PositionExampleComponent />
+      { /* <PositionExampleComponent /> */ }
+       {/* <PropsPractice name="Nakulan" mobile="99656331346" />
+      <PropsPractice name="Arun" mobile="965854124878" /> */}
+       <PropsPracticeTwo data={arr1} />
+      {/* <OurPromiseComponent /> */}
     </div>
   );
 }
