@@ -56,6 +56,8 @@ import LeadersTomorrowComponent from "./leaders-tomorrow/leaders-tomorrow-compon
 import ContactComponent from "./contactUs/contact.jsx";
 import FlexWrapComponent from "./flex-wrap/flex-wrap-component";
 import NotFoundComponent from "./404-component/404-component.jsx";
+import UseStateComponent from "./usestate-1st/use-state-component.jsx";
+import UsestateformComponent from "./use-state-form/use-state-form-component.jsx";
 // Example data array for PropsPracticeTwo
 // const arr1 = [
 //   { name: "John", mobile: "1234567890" },
@@ -78,7 +80,8 @@ function App() {
         <Route path="/contact" element={<ContactComponent/>} />
         <Route path="/flexwrap" element={<FlexWrapComponent/>} />
         <Route path="/impact" element={<ImpactComponent/>} />
-
+        <Route path="/usestate" element={<UseStateComponent/>} />
+        <Route path="/ustateform" element={<> <UsestateformComponent/> </>} />
         <Route path="*" element={<NotFoundComponent/>} />
       </Routes>
     </div>
