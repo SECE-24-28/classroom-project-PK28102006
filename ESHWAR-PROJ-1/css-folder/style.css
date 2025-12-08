@@ -1,0 +1,11 @@
+.heading_style {
+    color: red;
+    font-size: 40px;
+}
+.rectangle {
+    width: 200px;
+    height: 100px;
+    background-color: blue;
+    margin-left:50px;
+    padding-right:100px;
+}
