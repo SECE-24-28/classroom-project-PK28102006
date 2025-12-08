@@ -42,18 +42,25 @@ import "./App.css";
 // import TrustedbyComponent from "./trusted-by/trusted-by-component";
 // import ContactComponent from "./contactUs/contact.jsx";
 // import PostionComponent from "./positioning/position-component";
-// import ImpactComponent from "./Impact/impact-component";
+import ImpactComponent from "./Impact/impact-component";
 // import FlexWrapComponent from "./flex-wrap/flex-wrap-component";
 // import OurPromiseComponent from "./our-promise/our-promise-component";
 // import PositionExampleComponent from "./position-example/position-example-component";
 // import PropsPractice from "./props-practice/props-practice-component";
-import PropsPracticeTwo from "./props-practice-2/props-practice-2";
-
+// import PropsPracticeTwo from "./props-practice-2/props-practice-2";
+import { Routes,Route} from "react-router-dom";
+import OurPromiseComponent from "./our-promise/our-promise-component";
+import TrustedbyComponent from "./trusted-by/trusted-by-component";
+import PositionExampleComponent from "./position-example/position-example-component";
+import LeadersTomorrowComponent from "./leaders-tomorrow/leaders-tomorrow-component";
+import ContactComponent from "./contactUs/contact.jsx";
+import FlexWrapComponent from "./flex-wrap/flex-wrap-component";
+import NotFoundComponent from "./404-component/404-component.jsx";
 // Example data array for PropsPracticeTwo
-const arr1 = [
-  { name: "John", mobile: "1234567890" },
-  { name: "Jane", mobile: "0987654321" }
-];
+// const arr1 = [
+//   { name: "John", mobile: "1234567890" },
+//   { name: "Jane", mobile: "0987654321" }
+// ];
 
 function App() {
   return (
@@ -61,8 +68,19 @@ function App() {
       { /* <PositionExampleComponent /> */ }
        {/* <PropsPractice name="Nakulan" mobile="99656331346" />
       <PropsPractice name="Arun" mobile="965854124878" /> */}
-       <PropsPracticeTwo data={arr1} />
+       {/* <PropsPracticeTwo data={arr1} /> */}
       {/* <OurPromiseComponent /> */}
+      <Routes>
+        <Route path="/promise" element={<OurPromiseComponent/>} />
+        <Route path="/trust" element={<TrustedbyComponent/>} />
+        <Route path="/position" element={<PositionExampleComponent/>} />
+        <Route path="/leaders" element={<LeadersTomorrowComponent/>} />
+        <Route path="/contact" element={<ContactComponent/>} />
+        <Route path="/flexwrap" element={<FlexWrapComponent/>} />
+        <Route path="/impact" element={<ImpactComponent/>} />
+
+        <Route path="*" element={<NotFoundComponent/>} />
+      </Routes>
     </div>
   );
 }
