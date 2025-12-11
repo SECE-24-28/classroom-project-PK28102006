@@ -56,7 +56,8 @@ import axios from "axios";
 async function fetchMultipleApis() {
   let urls = [
     "https://dummyjson.com/todos",
-    "https://dummyjson.com/todos",
+    "https://dummyjson.com/users",
+    "https://dummyjson.com/products",
   ];
   let promises = urls.map((item) => fetch(item).then((res) => res.json()));
   let data = await Promise.all(promises);

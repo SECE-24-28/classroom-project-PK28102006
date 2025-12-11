@@ -61,6 +61,13 @@ import UsestateformComponent from "./use-state-form/use-state-form-component.jsx
 import AdditionOperationComponent from "./addition-operation-in-state/addition-operation-component.jsx";
 import HelloWorldComponent from "./hello-world/hello-world-component.jsx";
 import GetStartComponent from "./get-started/get-start-component.jsx";
+import FetchApiComponent from "./fetch-api/fetch-api-component.jsx";
+import LoadingSpinner from "./loading-spinner/loading-spinner-component.jsx";
+import UseEffectComponent from "./use-effect-practice/use-effect-practice.jsx";
+import UseEffectPracticeTwo from "./use-effect-practice/use-ffect-practice-2.jsx";
+import UseEffectPracticeThree from "./use-effect-practice/use-effect-practice-3.jsx";
+import PostDetailComponent from "./use-effect-practice/post-detail-component.jsx";
+import SignupFormComponent from "./signup-form-api/signup-form-component.jsx";
 
 // Example data array for PropsPracticeTwo
 // const arr1 = [
@@ -89,6 +96,13 @@ function App() {
         <Route path="/addition" element={<AdditionOperationComponent/>} />
         <Route path="/helloworld" element={<HelloWorldComponent/>} />
         <Route path="/getstarted" element={<GetStartComponent/>} />
+        <Route path="/fetchapi" element={<FetchApiComponent/>} />
+        <Route path="/loading" element={<LoadingSpinner/>} />
+        <Route path="/useeffect1" element={<UseEffectComponent/>} />
+        <Route path="/useeffect2" element={<UseEffectPracticeTwo/>} />
+        <Route path="/useeffect3" element={<UseEffectPracticeThree/>} />
+        <Route path="/post/:id" element={<PostDetailComponent/>} />
+        <Route path="/signup" element={<SignupFormComponent/>} />
         <Route path="*" element={<NotFoundComponent/>} />
       </Routes>
     </div>
