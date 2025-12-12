@@ -1,8 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const database = require("./db_connect/db");
-const BasicRoutes = require("./routes/basic-route");
-const AdminRoutes = require("./routes/admin-routes");
+const BasicRoutes = require("./routes/admin-routes");
 let port = 22000;
 const app = express();
 database.connect();
@@ -15,8 +14,7 @@ app.use(
 );
 
 app.use(express.json());
-app.use("/api/v1/user", BasicRoutes);
-app.use("/api/v1/admin", AdminRoutes);
+app.use("/api/v1/admin", BasicRoutes);
 app.get("/", (req, res) => {
   res.status(200).json({
     success: true,

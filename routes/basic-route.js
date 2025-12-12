@@ -3,21 +3,20 @@ const {
   createUser,
   createManyUsers,
   getAllUsers,
-  getUserById,
   updateEmail,
-  updateUser,
-  deleteUser,
+  getDetails,
+  userRegister,
+  getAllUserDetails,
 } = require("../apis-function/user-functions");
 
 const router = express.Router();
 
-// User CRUD routes
-router.post("/signup", createUser); // POST /api/v1/User/signup
-router.post("/signup-many", createManyUsers); // POST /api/v1/User/signup-many
-router.get("/", getAllUsers); // GET /api/v1/User
-router.get("/:id", getUserById); // GET /api/v1/User/:id
-router.put("/:id", updateUser); // PUT /api/v1/User/:id
-router.put("/:id/email", updateEmail); // PUT /api/v1/User/:id/email (legacy)
-router.delete("/:id", deleteUser); // DELETE /api/v1/User/:id
+router.post("/signup", createUser);
+router.post("/userSignupMany", createManyUsers);
+router.get("/getUsers", getAllUsers);
+router.put("/modifyMail", updateEmail);
+router.get("/get-details/:id", getDetails);
+router.post("/userRegister", userRegister);
+router.get("/getUserDetails/:email/:mobile", getAllUserDetails);
 
 module.exports = router;

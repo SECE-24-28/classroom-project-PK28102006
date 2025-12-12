@@ -1,34 +1,11 @@
-const User = require("../models/user");
-exports.createUser = async (req, res) => {
+const Admin = require("../models/Admin");
+exports.createAdmin = async (req, res) => {
   try {
     const { firstName, email } = req.body;
-    const creatUser = await User.create({
+    const createAdmin = await Admin.insertOne({
       firstName: firstName,
       email: email,
     });
-    return res.status(200).json({
-      success: true,
-      message: "User is created successfully",
-    });
-  } catch (e) {
-    console.error("Create User Error:", e);
-    if (e.code === 11000) {
-      return res.status(409).json({
-        success: false,
-        message: "User with this email already exists",
-      });
-    }
-    res.status(500).json({
-      success: false,
-      error: e.message,
-    });
-  }
-};
-
-exports.createManyUsers = async (req, res) => {
-  try {
-    const { details } = req.body;
-    const createUser = await User.insertMany(details);
     return res.status(200).json({
       success: true,
       message: "User is created successfully",
@@ -40,9 +17,25 @@ exports.createManyUsers = async (req, res) => {
     });
   }
 };
-exports.getAllUsers = async (req, res) => {
+
+exports.createManyAdmins = async (req, res) => {
   try {
-    const getDetails = await User.find();
+    const { details } = req.body;
+    const createUser = await Admin.insertMany(details);
+    return res.status(200).json({
+      success: true,
+      message: "User is created successfully",
+    });
+  } catch (e) {
+    res.status(404).json({
+      success: false,
+      error: e,
+    });
+  }
+};
+exports.getAllAdmins = async (req, res) => {
+  try {
+    const getDetails = await Admin.find();
     // console.log("The users details:", getDetails);
     return res.status(200).json({
       success: true,
@@ -58,15 +51,18 @@ exports.getAllUsers = async (req, res) => {
 exports.updateEmail = async (req, res) => {
   try {
     const { name, email } = req.body;
-    const updatethings = await User.updateOne(
+    console.log("Update Request Body:", req.body);
+    const updatethings = await Admin.updateOne(
       { firstName: name },
       { $set: { email: email } }
     );
+    console.log("Update Result:", updatethings);
     return res.status(200).json({
       success: true,
       message: "email is updated",
     });
   } catch (e) {
+    console.log("Update Error:", e);
     res.status(404).json({
       success: false,
       error: e,
@@ -94,11 +90,11 @@ exports.getDetails = async (req, res) => {
     });
   }
 };
-exports.userRegister = async (req, res) => {
+exports.AdminRegister = async (req, res) => {
   try {
     const { email, firstName, secondName, mobileNumber, password } = req.body;
 
-    const findUser = await User.findOne({
+    const findUser = await Admin.findOne({
       email: email,
       mobileNumber: mobileNumber,
     });
@@ -110,7 +106,7 @@ exports.userRegister = async (req, res) => {
         message: "User is already resigtered",
       });
     }
-    await User.create({
+    await Admin.create({
       email,
       firstName,
       secondName,
@@ -122,14 +118,15 @@ exports.userRegister = async (req, res) => {
       message: "User is registed successfully",
     });
   } catch (e) {
-    res.status(404).json({
+    console.error("AdminRegister Error:", e);
+    res.status(500).json({
       success: false,
-      error: e,
+      error: e.message,
     });
   }
 };
 
-exports.getAllUserDetails = async (req, res) => {
+exports.getAllAdminDetails = async (req, res) => {
   try {
     console.log("HEllo world");
 
@@ -139,7 +136,7 @@ exports.getAllUserDetails = async (req, res) => {
     console.log("The email query:", email);
     console.log("Mobile:", mobile);
 
-    const getDetails = await User.find({ email, mobileNumber: mobile });
+    const getDetails = await Admin.find({ email, mobileNumber: mobile });
     if (!getDetails) {
       return res.status(404).json({
         success: false,
