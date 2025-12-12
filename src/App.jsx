@@ -34,7 +34,9 @@
 
 // export default App
 import "./App.css";
-// import ImpactComponent from "./Impact/impact-component";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import ImpactComponent from "./Impact/impact-component";
 // import FlexBoxComponent from "./flex-box/flex-box-component";
 // import HelloWorldComponent from "./hello-world/hello-world-component";
 // import LeadersTomorrowComponent from "./leaders-tomorrow/leaders-tomorrow-component";
@@ -42,7 +44,6 @@ import "./App.css";
 // import TrustedbyComponent from "./trusted-by/trusted-by-component";
 // import ContactComponent from "./contactUs/contact.jsx";
 // import PostionComponent from "./positioning/position-component";
-import ImpactComponent from "./Impact/impact-component";
 // import FlexWrapComponent from "./flex-wrap/flex-wrap-component";
 // import OurPromiseComponent from "./our-promise/our-promise-component";
 // import PositionExampleComponent from "./position-example/position-example-component";
@@ -68,6 +69,9 @@ import UseEffectPracticeTwo from "./use-effect-practice/use-ffect-practice-2.jsx
 import UseEffectPracticeThree from "./use-effect-practice/use-effect-practice-3.jsx";
 import PostDetailComponent from "./use-effect-practice/post-detail-component.jsx";
 import SignupFormComponent from "./signup-form-api/signup-form-component.jsx";
+import UserFetchViaEmail from "./user-fetch-via-email/user-fetch-via-email.jsx";
+
+import AdminComponent from "./admin/admin-component.jsx";
 
 // Example data array for PropsPracticeTwo
 // const arr1 = [
@@ -103,8 +107,11 @@ function App() {
         <Route path="/useeffect3" element={<UseEffectPracticeThree/>} />
         <Route path="/post/:id" element={<PostDetailComponent/>} />
         <Route path="/signup" element={<SignupFormComponent/>} />
+        <Route path="/emailfetch" element={<UserFetchViaEmail/>} />
+        <Route path="/admin" element={<AdminComponent/>} />
         <Route path="*" element={<NotFoundComponent/>} />
       </Routes>
+      <ToastContainer />
     </div>
   );
 }

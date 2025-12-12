@@ -1,0 +1,8 @@
+{
+  "/api/v1/user/signup": "/user",
+  "/api/v1/user": "/user",
+  "/api/v1/admin/register": "/admins",
+  "/api/v1/admin": "/admins",
+  "/api/v1/admin/*": "/admins/$1",
+  "/api/v1/user/*": "/user/$1"
+}

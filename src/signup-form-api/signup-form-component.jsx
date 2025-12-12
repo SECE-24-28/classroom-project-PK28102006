@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const SignupFormComponent = () => {
   const [getDetails, setGetDetails] = useState([]);
@@ -7,47 +8,47 @@ const SignupFormComponent = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    setErrorMessage(""); // Clear previous errors
+    setErrorMessage(""); 
     try {
       console.log("Sending request...");
 
-      // CORRECTED URL: /api/v1/user/signup
+      // URL is correct for creating a user
       const pushDetails = await axios.post(
-        "http://localhost:21000/api/v1/user/signup", 
+        "http://localhost:22000/api/v1/user/signup", 
         {
           firstName: e.target.firstname.value,
           email: e.target.email.value,
         }
       );
 
-      // Check for 200 OR 201 (Created)
       if (pushDetails.status === 200 || pushDetails.status === 201) {
         console.log("The process is successful");
-        // Refresh the list after adding
         getDetailsFunction();
-        // clear form
         e.target.reset();
-        alert("Signup Successful!");
+        toast.success("Signup Successful!");
       } else {
         console.log("Error occured");
       }
     } catch (e) {
       console.log("Error:", e);
       if (e.response && e.response.status === 409) {
-        setErrorMessage("User with this email already exists.");
+        toast.error("User with this email already exists.");
       } else {
-        setErrorMessage("An error occurred during signup.");
+        toast.error("An error occurred during signup.");
       }
     }
   };
 
   const getDetailsFunction = async () => {
     try {
-      // CORRECTED URL: /api/v1/user
-      const getDetails = await axios.get(
-        "http://localhost:21000/api/v1/user"
+      // CORRECTED URL: Added /getUsers
+      const response = await axios.get(
+        "http://localhost:22000/api/v1/user/getUsers"
       );
-      setGetDetails(getDetails.data.data);
+      // CORRECTED DATA ACCESS: response.data.data
+      if (response.data && response.data.success) {
+        setGetDetails(response.data.data);
+      }
     } catch (e) {
       console.log("Error:", e);
     }
@@ -73,11 +74,10 @@ const SignupFormComponent = () => {
       
       {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
 
-      {/* Optional: Show data to prove it works */}
       <h3>Users List:</h3>
       <ul>
-        {getDetails.map((user) => (
-          <li key={user._id}>{user.firstName} - {user.email}</li>
+        {Array.isArray(getDetails) && getDetails.map((user) => (
+          <li key={user.id || user._id}>{user.firstName} - {user.email}</li>
         ))}
       </ul>
     </div>
@@ -85,3 +85,7 @@ const SignupFormComponent = () => {
 };
 
 export default SignupFormComponent;
+
+
+
+
